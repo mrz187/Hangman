@@ -26,11 +26,13 @@ DEFINES += QT_DEPRECATED_WARNINGS
 SOURCES += \
         main.cpp \
         frmmain.cpp \
-    highscore.cpp
+    highscore.cpp \
+    highscorelist.cpp
 
 HEADERS += \
         frmmain.h \
-    highscore.h
+    highscore.h \
+    highscorelist.h
 
 FORMS += \
         frmmain.ui
