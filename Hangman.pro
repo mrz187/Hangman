@@ -38,3 +38,9 @@ HEADERS += \
 
 FORMS += \
         frmmain.ui
+
+RESOURCES += \
+    data.qrc
+
+DISTFILES += \
+    ../splashdemo.png

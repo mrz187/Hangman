@@ -13,3 +13,18 @@ FrmMain::~FrmMain()
 {
     delete ui;
 }
+
+void FrmMain::on_btnPlay_clicked()
+{
+
+}
+
+void FrmMain::on_btnHighscore_clicked()
+{
+
+}
+
+void FrmMain::on_btnOptions_clicked()
+{
+
+}

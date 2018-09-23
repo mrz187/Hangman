@@ -8,14 +8,17 @@
 
 Dictionary::Dictionary()
 {
-    QString newPath;
+    /*QString newPath;
     QDir dir(QDir::current());
     dir.cdUp();
     dir.cd("Hangman");
     newPath = dir.path();
     QDir::setCurrent(newPath);
 
-    QFile dictionary("Dictionary.txt");
+    edit: not nessecary because loading .txt from qrc file
+    */
+
+    QFile dictionary(":/dictionary/Dictionary.txt");
     if(!dictionary.open(QIODevice::ReadOnly | QIODevice::Text))
     {
         qDebug() << "File not exist!";
@@ -53,7 +56,7 @@ void Dictionary::getWord()
             this->word=this->dictionaryList[randomNum];
             for(int i=0;i<this->getWordSize();i++)
             {
-                this->guessString.insert(i," ");
+                this->guessString.insert(i,"$");
             }
             sameWords=false;
             //qDebug()<< QString::number(randomNum);
@@ -98,6 +101,7 @@ int Dictionary::sizeOfDictionary()
 
 void Dictionary::randomShuffle()
 {
+
     for(int i =0;i<3;i++)
     {
         std::random_shuffle(this->dictionaryList.begin(),this->dictionaryList.end());

@@ -1,0 +1,8 @@
+<RCC>
+    <qresource prefix="/images">
+        <file>splashdemo.png</file>
+    </qresource>
+    <qresource prefix="/dictionary">
+        <file>Dictionary.txt</file>
+    </qresource>
+</RCC>
