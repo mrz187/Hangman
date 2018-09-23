@@ -2,6 +2,7 @@
 #define FRMMAIN_H
 
 #include <QMainWindow>
+#include <dictionary.h>
 
 namespace Ui {
 class FrmMain;
@@ -17,6 +18,8 @@ public:
 
 private:
     Ui::FrmMain *ui;
+    Dictionary* dict;
+
 };
 
 #endif // FRMMAIN_H

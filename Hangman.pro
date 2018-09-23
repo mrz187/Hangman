@@ -27,12 +27,14 @@ SOURCES += \
         main.cpp \
         frmmain.cpp \
     highscore.cpp \
-    highscorelist.cpp
+    highscorelist.cpp \
+    dictionary.cpp
 
 HEADERS += \
         frmmain.h \
     highscore.h \
-    highscorelist.h
+    highscorelist.h \
+    dictionary.h
 
 FORMS += \
         frmmain.ui
