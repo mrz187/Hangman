@@ -11,20 +11,24 @@
 #include <QDebug>
 #include <QVector>
 #include <QDir>
+#include <cstdlib>
+#include <QRandomGenerator>
 
 class Dictionary
 {
 public:
     Dictionary();
-    bool chooseWord(); // aus dict picken ,wenn es das gleiche ist neu suchen
-    QString getWord(); // gepicktes word zurückgeben
+    bool chooseWord();
+    void getWord(); // neue funktion get length fuer view erstellen
     bool checkWord();
+    int sizeOfDictionary();
 
 
 private:
     QVector<QString>dictionaryList;
     QString word;
-    void randomList(); //List random machen
+    QRandomGenerator *genRand;
+    void randomShuffle(); //List random machen
 
 };
 

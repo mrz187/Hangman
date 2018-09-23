@@ -18,7 +18,6 @@ public:
 
 private:
     Ui::FrmMain *ui;
-    Dictionary* dict;
 
 };
 

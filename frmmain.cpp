@@ -7,7 +7,6 @@ FrmMain::FrmMain(QWidget *parent) :
     ui(new Ui::FrmMain)
 {
     ui->setupUi(this);
-    this->dict = new Dictionary();
 }
 
 FrmMain::~FrmMain()

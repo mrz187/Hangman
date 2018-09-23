@@ -8,11 +8,12 @@
 
 Dictionary::Dictionary()
 {
-
-
-
-
-    QDir::setCurrent("D:/Moritz/Projekte/Hangman");
+    QString newPath;
+    QDir dir(QDir::current());
+    dir.cdUp();
+    dir.cd("Hangman");
+    newPath = dir.path();
+    QDir::setCurrent(newPath);
 
     QFile dictionary("Dictionary.txt");
     if(!dictionary.open(QIODevice::ReadOnly | QIODevice::Text))
@@ -26,12 +27,35 @@ Dictionary::Dictionary()
         QString line = in.readLine();
         this->dictionaryList.append(line);
     }
-    this->randomList();
+    this->randomShuffle();
+
+    this->word ="";
+
+    this->genRand = QRandomGenerator::global();
+
+
+    for(int i=0;i<this->dictionaryList.size();i++)
+    {
+        qDebug() << this->dictionaryList[i];
+    }
+    getWord();
+
 }
 
 
-QString Dictionary::getWord()
+void Dictionary::getWord()
 {
+    bool sameWords = true;
+    while(sameWords)
+    {
+        int randomNum =this->genRand->bounded(0,this->sizeOfDictionary());
+        if(this->word!=this->dictionaryList[randomNum])
+        {
+            this->word=this->dictionaryList[randomNum];
+            sameWords=false;
+            //qDebug()<< QString::number(randomNum);
+        }
+    }
 
 }
 
@@ -40,7 +64,16 @@ bool Dictionary::checkWord()
 
 }
 
-void Dictionary::randomList()
+int Dictionary::sizeOfDictionary()
 {
+    return this->dictionaryList.size();
+}
+
+void Dictionary::randomShuffle()
+{
+    for(int i =0;i<3;i++)
+    {
+        std::random_shuffle(this->dictionaryList.begin(),this->dictionaryList.end());
+    }
 
 }
