@@ -20,13 +20,15 @@ public:
     Dictionary();
     bool chooseWord();
     void getWord(); // neue funktion get length fuer view erstellen
-    bool checkWord();
+    int getWordSize();
+    QString checkWord(QString input, bool &won);
     int sizeOfDictionary();
 
 
 private:
     QVector<QString>dictionaryList;
     QString word;
+    QString guessString;
     QRandomGenerator *genRand;
     void randomShuffle(); //List random machen
 
