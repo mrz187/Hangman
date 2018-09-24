@@ -7,6 +7,14 @@ FrmMain::FrmMain(QWidget *parent) :
     ui(new Ui::FrmMain)
 {
     ui->setupUi(this);
+
+    this->demoAnim = new Animation(this)
+    this->demoAnim->startAnim();
+
+
+
+
+
 }
 
 FrmMain::~FrmMain()

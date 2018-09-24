@@ -2,7 +2,7 @@
 #define FRMMAIN_H
 
 #include <QMainWindow>
-#include <dictionary.h>
+#include <animation.h>
 
 namespace Ui {
 class FrmMain;
@@ -25,7 +25,7 @@ private slots:
 
 private:
     Ui::FrmMain *ui;
-    Dictionary *dict;
+    Animation *demoAnim;
 
 };
 

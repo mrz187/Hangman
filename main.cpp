@@ -14,7 +14,7 @@ int main(int argc, char *argv[])
     QApplication a(argc, argv);
     QPixmap pixmap(":/images/splashdemo.png");
     QSplashScreen splash(pixmap);
-    splash.show();
+    //splash.show();
     //I::sleep(5);
     FrmMain w;
     w.show();

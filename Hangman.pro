@@ -28,13 +28,17 @@ SOURCES += \
         frmmain.cpp \
     highscore.cpp \
     highscorelist.cpp \
-    dictionary.cpp
+    dictionary.cpp \
+    hangman.cpp \
+    animation.cpp
 
 HEADERS += \
         frmmain.h \
     highscore.h \
     highscorelist.h \
-    dictionary.h
+    dictionary.h \
+    hangman.h \
+    animation.h
 
 FORMS += \
         frmmain.ui
