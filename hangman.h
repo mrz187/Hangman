@@ -11,6 +11,7 @@ public:
     Hangman();
     QRectF boundingRect() const;
     void paint(QPainter *painter, const QStyleOptionGraphicsItem *option, QWidget *widget = Q_NULLPTR);
+    void advance(int phase);
 
 
 

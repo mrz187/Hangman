@@ -27,7 +27,9 @@ private slots:
 private:
     Ui::FrmMain *ui;
     QGraphicsScene *scene;
-    Hangman * stick;
+    Hangman *stick;
+    QGraphicsItemAnimation *anim;
+    QTimeLine *timer;
 
 };
 
