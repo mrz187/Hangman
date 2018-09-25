@@ -8,9 +8,10 @@ FrmMain::FrmMain(QWidget *parent) :
 {
     ui->setupUi(this);
 
-    this->demoAnim = new Animation(this)
-    this->demoAnim->startAnim();
-
+    this->scene = new QGraphicsScene(this);
+    this->ui->graphicsView->setScene(this->scene);
+    this->stick = new Hangman();
+    this->scene->addItem(this->stick);
 
 
 

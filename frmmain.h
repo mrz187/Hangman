@@ -2,7 +2,8 @@
 #define FRMMAIN_H
 
 #include <QMainWindow>
-#include <animation.h>
+#include <QtCore>
+#include <hangman.h>
 
 namespace Ui {
 class FrmMain;
@@ -25,7 +26,8 @@ private slots:
 
 private:
     Ui::FrmMain *ui;
-    Animation *demoAnim;
+    QGraphicsScene *scene;
+    Hangman * stick;
 
 };
 

@@ -1,18 +1,17 @@
 #ifndef HANGMAN_H
 #define HANGMAN_H
 
-#include <QObject>
-#include <QLine>
+#include <QGraphicsItem>
+#include <QGraphicsItemAnimation>
+#include <QPainter>
 
-class Hangman: public QObject
+class Hangman : public QGraphicsItem
 {
 public:
     Hangman();
-    QLine getLine();
+    QRectF boundingRect() const;
+    void paint(QPainter *painter, const QStyleOptionGraphicsItem *option, QWidget *widget = Q_NULLPTR);
 
-
-private:
-    QLine line;
 
 
 };
